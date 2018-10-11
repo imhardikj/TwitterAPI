@@ -19,5 +19,9 @@ twitter = Twitter(auth=oauth)
 
 world_trends = twitter.trends.place(_id=23424848)
 
-print(json.dumps(world_trends, indent=4))
+#print(json.dumps(world_trends, indent=4))
 
+i=0
+while i<10:
+    print(world_trends[0]['trends'][i]['name'])
+    i=i+1
