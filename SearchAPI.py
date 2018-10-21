@@ -21,4 +21,4 @@ twitter = Twitter(auth=oauth)
 
 iteratr = twitter.search.tweets(q="trump", result_type='recent', lang='en', count=10)
 
-print (json.dumps(iteratr, indent=4))
+print(json.dumps(iteratr, indent=4))
