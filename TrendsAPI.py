@@ -17,17 +17,17 @@ oauth = OAuth(ACCESS_TOKEN, ACCESS_SECRET, CONSUMER_KEY, CONSUMER_SECRET)
 # Initiate the connection to Twitter REST API
 twitter = Twitter(auth=oauth)
 
-world_trends = twitter.trends.place(_id=23424848)
+india_trends = twitter.trends.place(_id=23424848)
 
 #print(json.dumps(world_trends, indent=4))
 
 i=0
 while i<10:
-    print(world_trends[0]['trends'][i]['name'])
+    print(india_trends[0]['trends'][i]['name'])
     i=i+1
 
 # Finding remaining quota of Rate limit
-''''''
+"""
 mess = twitter.application.rate_limit_status()
 print(mess)
-''''''
+"""
